@@ -9,7 +9,7 @@ import java.util.*;
     answer[i] == i (as a string) if none of the above conditions are true.
  * 
  * Example 1:
-    Input: n = 3
+    Input: n = 3git 
     Output: ["1","2","Fizz"]
  * Example 2:
     Input: n = 5
@@ -18,18 +18,27 @@ import java.util.*;
     Input: n = 15
     Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
  * Constraints:
-    1 <= n <= 104
+    1 <= n <= 10^4
+ * 
+ * COMPLETED ON 7/11/2022
  */
 public class FizzBuzz {
-
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-   
+  
     public List<String> fizzBuzz(int n) {
-        List<String> arrayList = new ArrayList<>();
-        
-        return arrayList;
-    }
+        ArrayList<String> numbers = new ArrayList<String>();
 
+        for (int i = 1; i <= n; i++){
+            if ((i % 3 == 0) && (i % 5 == 0)){
+                numbers.add("FizzBuzz");
+            } else if (i % 3 == 0){
+                numbers.add("Fizz");
+            } else if (i % 5 == 0){
+                numbers.add("Buzz");
+            } else {
+                numbers.add(String.valueOf(i));
+            }
+        }
+        System.out.print(numbers);
+        return numbers;
+    }
 }
